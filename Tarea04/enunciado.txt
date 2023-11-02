@@ -1,0 +1,66 @@
+// Connect to the database
+$mysqli = new mysqli("localhost", "username", "password", "database_name");
+
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
+// Create
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    
+    $sql = "INSERT INTO users (name, email, phone) VALUES ('$name', '$email', '$phone')";
+    
+    if ($mysqli->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
+    }
+}
+
+// Read
+$sql = "SELECT * FROM users";
+$result = $mysqli->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "ID: " . $row["id"] . " - Name: " . $row["name"] . " - Email: " . $row["email"] . " - Phone: " . $row["phone"] . "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+// Update
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
+    $id = $_POST["id"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    
+    $sql = "UPDATE users SET name='$name', email='$email', phone='$phone' WHERE id=$id";
+    
+    if ($mysqli->query($sql) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $mysqli->error;
+    }
+}
+
+// Delete
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
+    $id = $_POST["id"];
+    
+    $sql = "DELETE FROM users WHERE id=$id";
+    
+    if ($mysqli->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+    } else {
+        echo "Error deleting record: " . $mysqli->error;
+    }
+}
+
+// Close connection
+$mysqli->close();

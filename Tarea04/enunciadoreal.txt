@@ -1,0 +1,38 @@
+Enunciado.
+
+Vamos a crear un programa que almacene datos de películas en $_SESSION.
+
+La aplicación constará de tres páginas:
+
+    Página principal donde se muestre un formulario para que se inserten los datos de la película que serán el título, el año, el género y el director. El género se elegirá mediante una lista desplegable entre las opciones "Comedia", "Drama", "Musical", "Acción" e "Infantil". Esta página además debe tener un enlace a la otras dos páginas.
+    Página donde se muestren las películas almacenadas enmarcadas en una tabla HTML. Debe tener un bóton para volver a la página principal.
+    Página de búsqueda. Nos aparece un formulario con la lista desplegable de los géneros y un botón de filtrado, al seleccionar un género y pulsar el botón nos debe mostrar únicamente las películas del género seleccionado. Debe tener un bóton para volver a la página principal.
+
+Criterios de puntuación. Total 10 puntos.
+
+    Página principal: 3,5 puntos.
+    Página con el listado: 3 puntos.
+    Página de búsqueda: 3,5 puntos.
+
+
+Se valorarán  cada uno de los siguientes ítems:
+
+    Utilizar los elementos que se citan en los ejercicios.
+    Conexión entre las diferentes páginas.
+    Control de errores.
+    Iniciar y restablecer correctamente las sesiones en las páginas.
+    Introducir comentarios y estructurar el código.
+
+Recursos necesarios para realizar la Tarea.
+Ordenador con PHP, servidor web Apache y entorno de desarrollo NetBeans, correctamente instalado y configurado.
+Consejos y recomendaciones.
+Además del manual online de PHP, se recomienda dar libre acceso a Internet para la búsqueda de información.
+Indicaciones de entrega.
+
+Una vez realizada la tarea comprimirás el proyecto en un único fichero. El envío se realizará a través de la plataforma de la forma establecida para ello, y el archivo se nombrará siguiendo las siguientes pautas:
+
+apellido1_apellido2_nombre_SIGxx_Tarea
+
+Asegúrate que el nombre no contenga la letra ñ, tildes ni caracteres especiales extraños. Así por ejemplo la alumna Begoña Sánchez Mañas para la cuarta unidad del MP de DWES, debería nombrar esta tarea como...
+
+sanchez_manas_begona_DWES04_Tarea

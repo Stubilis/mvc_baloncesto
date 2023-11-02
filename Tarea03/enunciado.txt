@@ -1,0 +1,32 @@
+Vamos a usar la base de datos que podéis descargar junto a la tarea. Trabajaremos con una base de datos de siete tablas, y nos fijaremos en las tablas Socios, Préstamos, Ejemplares y Libros.
+
+El programa constará de varias páginas:
+
+    La página principal mostrará una tabla HTML con los préstamos realizados. 
+    Los datos que se mostrarán serán el nombre del socio, la signatura del ejemplar, 
+    el título del libro y las fechas de devolución y préstamo. 
+    En la parte superior deben aparecer los últimos preśtamos realizados.
+    Debe dar la oportunidad de filtrar los resultados por socio y libro (¡ojo, no por ejemplar!).
+    En lugar de la fecha de devolución, cuando el préstamo no haya sido devuelto aparecerá un botón que automáticamente realizará la devolución del préstamo, 
+    tomando como fecha de devolución la fecha actual.
+    Al final de cada fila debe aparecer un botón que elimine el préstamo al que se corresponda esa fila.
+    En la parte inferior de la página debe aparecer un botón para crear un nuevo préstamo. Este botón nos llevará a una nueva página.
+    En la página de creación préstamos tendremos dos listas desplegables, una con los socios y otra con los ejemplares que están sin prestar. En esta segunda lista deben poderse ver los títulos de los libros. Es opcional utilizar otros métodos de selección de socios y ejemplares, como botones de búsqueda, arrays de checkboxes...
+    El Id del préstamo lo tomará de forma automática y la fecha la obtendremos de la fecha actual.
+    Debe existir la posibildad de cancelar la creación del préstamo. Tanto al confirmar o al cancelar la creación del préstamo volveremos a la página principal.
+
+La tarea se evaluará de la siguiente forma:
+
+    Apartados 1, 2, 3, 4 y 6: 1,5 puntos.
+    Apartados 5, 7 y 8 : 0,5 puntos.
+    Introducir comentarios y legibilidad del código: 1 punto.
+
+Podéis elegir entre usar PDO o MSQLI.
+
+Los datos de conexión a la base de datos deben ser:
+
+    BD: biblioteca.
+    Host: localhost.
+    Usuario: super.
+    Contraseña: 123456.
+    Además debe poder ejecutarse en un servidor Linux, por lo que debéis respetar el usu de mayúsculas y minúsculas en los nombres de la base de datos, las tablas, las columnas...
